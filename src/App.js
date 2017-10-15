@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { View, Text } from 'react-native';
-import Reducer from './reducers/index';
 import firebase from 'firebase';
+import Reducer from './reducers/index';
+import LoginForm from './components/login_form';
+
 
 class App extends Component {
   componentWillMount() {
@@ -17,14 +19,12 @@ class App extends Component {
   };
   firebase.initializeApp(config);
   }
-  
+
   render() {
     return (
       <Provider store={createStore(Reducer)}>
         <View>
-          <Text>
-            Hello!
-          </Text>
+          <LoginForm />
         </View>
       </Provider>
     );
