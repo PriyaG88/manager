@@ -24,7 +24,7 @@ export const employeeCreate = ({ name, phone, shift }) => {
   };
 };
 
-export const employeeFetch = () => {
+export const employeesFetch = () => {
   const { currentUser } = firebase.auth();
   //snapshot is an object that describes the data - is not the data itself
   return (dispatch) => {
